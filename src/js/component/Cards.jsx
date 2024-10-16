@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./Card";
+import PropTypes from "prop-types";
 
 const Cards = () => {
   
@@ -7,7 +8,7 @@ const Cards = () => {
     { title: "Card #1", description: "Este es el texto de mi Card" },
     { title: "Card #2", description: "Este es el texto de mi Card" },
     { title: "Card #3", description: "Este es el texto de mi Card" },
-    { title: "Card #4", description: "Este es el texto de mi Card"},
+    { title: "Card #4", description: "Este es el texto de mi Card" },
   ];
 
   let randomImages = CardsInfo.map(() => {
@@ -19,7 +20,7 @@ const Cards = () => {
   return (
     <div className="container">
       <div className="row">
-        {CardsInfo.map((value, index, array) => {
+        {CardsInfo.map((value, index) => {
           return (
             <div key={index} className="col">
               <Card title={value.title} description={value.description} images={randomImages[index]}/>
